@@ -37,6 +37,7 @@ echo'
                     <li><a class="nav-link menu-title link-nav" href="contact.php"><i data-feather="phone-call"></i><span>Contact</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="about.php"><i data-feather="info"></i><span>About</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="settings.php"><i data-feather="settings"></i><span>Settings</span></a></li>
+                    <li><a class="nav-link menu-title link-nav" href="aaoifi_registrations.php"><i data-feather="mail"></i><span>AAOIFI Registrations</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="email_queries.php"><i data-feather="mail"></i><span>Email Queries</span></a></li>
                     <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="user"></i><span>Profile</span></a>
                         <ul class="nav-submenu menu-content">
