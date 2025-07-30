@@ -9,15 +9,15 @@ $condition = array(
    ,'return_type'  =>  'single'
 );
 $row = $dblms->getRows(FUNCTIONS , $condition);
-$condition = array ( 
-    'select'       =>  "type_id, type_name"
-   ,'where' 	    =>  array( 
-                               'is_deleted'         => 0
-                               ,'type_status'       => 1
-                           )
-   ,'return_type'  =>  'all' 
-  ); 
-$type = $dblms->getRows(FUNCTION_TYPES, $condition);
+// $condition = array ( 
+//     'select'       =>  "type_id, type_name"
+//    ,'where' 	    =>  array( 
+//                                'is_deleted'         => 0
+//                                ,'type_status'       => 1
+//                            )
+//    ,'return_type'  =>  'all' 
+//   ); 
+// $type = $dblms->getRows(FUNCTION_TYPES, $condition);
 echo'
 <div class="row">
     <div class="col-sm-6">
@@ -42,24 +42,24 @@ echo'
                     <label class="form-label">Type <span class="text-danger">*</span></label>
                     <select class="form-control js-example-basic-single" name="id_type" id="function_type" onchange="toggleSubType()" required>
                         <option value=""> Choose one</option>';
-                        foreach($type as $key => $val):
+                        foreach($function_type as $key => $val):
                             echo'<option value="'.$val['type_id'].'" '.($val['type_id']== $row['id_type']?"selected":"").'>'.$val['type_name'].'</option>';
                         endforeach;
                         echo '
                     </select>
                 </div>';
                 // if($row['id_sub_type']=="2"){
-                echo'
-                <div class="col mb-2" id="sub_type_container" style="'.($row['id_type']!= "2"?"display: none;":"").'">
-                    <label class="form-label">Sub Type <span class="text-danger">*</span></label>
-                    <select class="form-control js-example-basic-single" name="id_sub_type" id="news_status" required>
-                        <option value=""> Choose one</option>';
-                        foreach(get_publication_type() as $key => $value):
-                            echo'<option value="'.$key.'" '.($key== $row['id_sub_type']?"selected":"").'>'.$value.'</option>';
-                        endforeach;
-                        echo'
-                    </select>
-                </div>';
+                // echo'
+                // <div class="col mb-2" id="sub_type_container" style="'.($row['id_type']!= "2"?"display: none;":"").'">
+                //     <label class="form-label">Sub Type <span class="text-danger">*</span></label>
+                //     <select class="form-control js-example-basic-single" name="id_sub_type" id="news_status" required>
+                //         <option value=""> Choose one</option>';
+                //         foreach(get_publication_type() as $key => $value):
+                //             echo'<option value="'.$key.'" '.($key== $row['id_sub_type']?"selected":"").'>'.$value.'</option>';
+                //         endforeach;
+                //         echo'
+                //     </select>
+                // </div>';
                     // }
                 echo'
             </div>

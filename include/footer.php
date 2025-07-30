@@ -37,33 +37,59 @@ echo'
 <footer class="footer-one">
     <div class="container">
         <div class="footer-main-one">
-            <div class="footer-one-inner">
-                <div class="row gutter-y-30">
-                    <div class="col-xl-3 col-lg-4 col-md-6 footer-about">
+            <div class="footer-one-inner py-4">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 footer-about">
                         <div class="footer-one-about">
                             <a href="#">
-                                <img src="'.SITE_URL_WEB.'assets/images/logo.png" alt="footer-logo">
+                                <img src="'.SITE_URL_WEB.'assets/images/logo.png" alt="footer-logo" height="160px">
                             </a>
                         </div>
-                        <div class="footer-one-about-details">
+                        <div>
                             <p>'.html_entity_decode($web['setting_desc']).'</p>
-                        </div>
+                        </div>';
+                        /*
+                        echo'
                         <div class="footer-one-about-contact">
                             <h4>Contact us</h4>
                             <ul>
                                 <li><a href="mailto:'.$web['setting_email'].'"><i class="flaticon-envelope"></i>'.$web['setting_email'].'</a></li>
                                 <li><a href="tel:+020.098.45611"><i class="flaticon-phone"></i>'.$info['info_phone'].'</a></li>
                             </ul>
-                        </div>
+                        </div>';
+                        */
+                        echo'
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="footer-one-link">
                             <h3>Functions</h3>
-                            <ul>';
-                            foreach ($type as $key => $value) {
-                                echo '<li><i class="flaticon-right-arrow"></i><a href="'.SITE_URL_WEB.'function/'.$value['type_href'].'">'.$value['type_name'].'</a></li>';
-                            }
-                                echo'
+                            <ul>
+                                <li>
+                                    <i class="flaticon-right-arrow"></i>
+                                    <a href="'.SITE_URL_WEB.'function/consultancy-advisory-services">Consultancy & Advisory Services</a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-right-arrow"></i>
+                                    <a href="'.SITE_URL_WEB.'function/training-and-capacity-building">Training and Capacity Building</a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-right-arrow"></i>
+                                    <a href="'.SITE_URL_WEB.'function/course">Course</a>
+                                </li>
+                                <li>
+                                    <i class="flaticon-right-arrow"></i>
+                                    <a href="'.SITE_URL_WEB.'function/aaoifi-certificate-registration">AAOIFI Certificate Registration</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="footer-one-link m-0">
+                            <h3>Publications</h3>
+                            <ul>
+                                <li><i class="flaticon-right-arrow"></i><a href="'.SITE_URL_WEB.'publications/books">Books</a></li>
+                                <li><i class="flaticon-right-arrow"></i><a href="'.SITE_URL_WEB.'publications/articles">Articles</a></li>
+                                <li><i class="flaticon-right-arrow"></i><a href="'.SITE_URL_WEB.'publications/reports">Reports</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,6 +104,9 @@ echo'
                             </ul>
                         </div>
                     </div>
+                    ';
+                    /*
+                    echo'
                     <div class="col-xl-4 col-md-6">
                         <div class="footer-One-subscribe">
                             <h3>Gallery</h3>
@@ -92,6 +121,7 @@ echo'
                                             </a>
                                         </div>
                                     ';*/
+                                    /*
                                     echo'
                                         <div class="gallery-item col-6">
                                             <a href="javascript:void(0);" class="image-popup" data-image="'.SITE_URL.'uploads/images/gallery/'.$image['gallery_photo'].'">
@@ -104,7 +134,9 @@ echo'
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>';
+                    */
+                    echo'
                 </div>
             </div>
         </div>
@@ -166,47 +198,33 @@ echo'
             <div class="logo-box">
                 <a href="index.html"><img width="150" src="'.SITE_URL_WEB.'assets/images/logo.png" alt="logo"></a>
             </div>
-            <div class="mobile-nav-container">
-                <ul class="mobile-menu-list">
-                    <li class="menu-item-has-children dropdown"><a href="#">Home</a>
-                        <ul>
-                            <li><a href="index.html">Home-1</a></li>
-                            <li><a href="index-2.html">Home-2</a></li>
-                            <li><a href="index-3.html">Home-3</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown"><a href="#">Services </a>
-                        <ul>
-                            <li><a href="service.html">Services </a></li>
-                            <li><a href="service-2.html">Services 2</a></li>
-                            <li><a href="service-details.html">Services Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown"><a href="#">Pages</a>
-                        <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="careers.html">Careers</a></li>
-                            <li><a href="apply-loan.html">Apply a Loan</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                            <li><a href="team.html">Meet The Team</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown"><a href="#">Blog</a>
-                        <ul>
-                            <li><a href="blog.html">Blog Standards</a></li>
-                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                            <li><a href="blog-grid-2.html">Blog Grid 2</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown"><a href="#">Portfolio</a>
-                        <ul>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="portfolio-grid.html">Portfolio Grid</a></li>
-                            <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                        </ul>
-                    </li>
+            <div class="mobile-nav-container">';
+                echo '
+                <ul class="mobile-menu-list">';
+                    foreach(navBarMaker() as $key => $val) {
+                        echo '
+                        <li class="'.(!empty($val['links']) ? 'menu-item-has-children dropdown' : '').'">
+                            <a href="'.SITE_URL_WEB.$key.'">
+                                '.moduleName(strtolower($val['name'])).'
+                                '.(!empty($val['links']) ? '<i class="fa-solid fa-chevron-down"></i>' : '').'
+                            </a>';
+                            
+                        if (!empty($val['links'])) {
+                            echo '<ul>';
+                            foreach($val['links'] as $SubKey => $SubVal) {
+                                echo '
+                                <li>
+                                    <a href="'.SITE_URL_WEB.$SubKey.'">'.
+                                        (($SubVal['name'] != 'FAQ') ? ucwords(strtolower($SubVal['name'])) : $SubVal['name']).'
+                                    </a>
+                                </li>';
+                            }
+                            echo '</ul>';
+                        }
+
+                        echo '</li>';
+                    }
+                echo '
                 </ul>
             </div>
         </div>

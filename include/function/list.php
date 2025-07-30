@@ -1,9 +1,16 @@
 <?php
+    $typeId = null;
+    foreach ($function_type as $type) {
+        if ($type['type_href'] === ZONE) {
+            $typeId = $type['type_id'];
+            break;
+        }
+    }
     $sqlArrayFunction = array(
-        'select' => 'f.functions_id, f.functions_title, f.functions_href, f.functions_file, f.functions_photo, f.functions_desc, f.id_type, f.date_added',
-        'join'   => 'INNER JOIN ' . FUNCTION_TYPES . ' ft ON f.id_type = ft.type_id AND ft.type_href = \'' . ZONE . '\'',
+        'select' => 'f.functions_id, f.functions_title, f.functions_href, f.functions_file, f.functions_photo, f.functions_desc, f.id_type, f.id_sub_type, f.date_added',
         'where'  => array(
             'f.functions_status' => '1',
+            'f.id_type'       => $typeId,
             'f.is_deleted'       => '0'
         ),
         'return_type' => 'all'
@@ -36,7 +43,7 @@
                                 <img src="'.SITE_URL.'uploads/images/functions/'.$val['functions_photo'].'" alt="blog-image"></a>
                             </div>
                             <div class="blog-item-meta">
-                                <p><a href="'.SITE_URL_WEB.CONTROLER.'/'.ZONE.'">'.get_functiontypes($val['id_type']).'</a></p>
+                                <p><a href="'.SITE_URL_WEB.CONTROLER.'/'.ZONE.'">'.(!empty($val['id_sub_type'])?get_publication_type($val['id_sub_type']):get_functiontypes($val['id_type'])).'</a></p>
                                 <p><a href="#">On '.date("d M, Y",strtotime($val['date_added'])).'</a></p>
                             </div>
                             <div class="blog-item-details">

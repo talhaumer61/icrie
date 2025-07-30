@@ -1,13 +1,6 @@
 <?php
-$condition = array ( 
-    'select'       =>  "type_id, type_name"
-   ,'where' 	    =>  array( 
-                               'is_deleted'         => 0
-                               ,'type_status'       => 1
-                           )
-   ,'return_type'  =>  'all' 
-  ); 
-$type = $dblms->getRows(FUNCTION_TYPES, $condition);
+
+
 echo'
 <div class="row">
     <div class="col-sm-6">
@@ -20,7 +13,7 @@ echo'
     </div>
 </div>
 <div class="card">
-    <form submit_requestsubmit_requestsubmit_requestsubmit_request>
+    <form autocomplete="off" class="form-validate" enctype="multipart/form-data" method="post" accept-charset="utf-8">
         <div class="card-body">
             <div class="row">
                 <div class="col mb-2">
@@ -31,7 +24,7 @@ echo'
                     <label class="form-label">Type <span class="text-danger">*</span></label>
                     <select class="form-control js-example-basic-single" name="id_type" id="function_type" onchange="toggleSubType()" required>
                         <option value=""> Choose one</option>';
-                            foreach($type as $key => $val):
+                            foreach($function_type as $key => $val):
                                 echo'<option value="'.$val['type_id'].'">'.$val['type_name'].'</option>';
                             endforeach;
                         echo '

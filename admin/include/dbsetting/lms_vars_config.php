@@ -8,7 +8,7 @@ date_default_timezone_set("Asia/Karachi");
 define( 'LMS_HOSTNAME'          , 'localhost' );
 define( 'LMS_NAME'              , 'gptech_icrie' );
 define( 'LMS_USERNAME'          , 'root');
-define( 'LMS_USERPASS'          , '' );
+define( 'LMS_PASSWORD'          , '' );
 
 // ADMIN TABLES
 define('ADMINS'                 , 'ic_admins');
@@ -30,7 +30,8 @@ define('TEAMS'					, 'ic_team');
 define('TUTORS'					, 'ic_tutors');
 define('COURSE'					, 'ic_course');
 define('COURSE_REQUESTS'		, 'ic_course_requests');
-define('FATWA_REQUESTS'		, 'ic_fatwa_requests');
+define('AAOIFI_REGISTRATIONS'	, 'ic_aaoifi_registrations');
+define('FATWA_REQUESTS'		    , 'ic_fatwa_requests');
 define('CONTACT_INFO'			, 'ic_contact_info');
 define('ABOUT'					, 'ic_about');
 define('NOTICE'					, 'ic_notice');
@@ -38,6 +39,8 @@ define('FEATURE'				, 'ic_features');
 define('SETTING'				, 'ic_setting');
 define('REGISTER'				, 'ic_registration');
 define('FUNCTIONS'				, 'ic_functions');
+define('JOURNALS'				, 'ic_journals');
+define('PUBLICATIONS'		    , 'ic_publications');
 define('FUNCTION_TYPES'			, 'ic_function_types');
 define('FAQ'					, 'ic_faqs');
 

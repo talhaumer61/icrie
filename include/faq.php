@@ -27,12 +27,12 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse'.$key.'" aria-expanded="true" aria-controls="collapseOne">
-                                        '.$val['faq_qns'].'
+                                        '.html_entity_decode(html_entity_decode($val['faq_qns'])).'
                                     </button>
                                 </h2>
                                 <div id="collapse'.$key.'" class="accordion-collapse collapse '.($key==0?"show":"").'" data-bs-parent="#accordionfaq">
                                     <div class="accordion-body">
-                                        <p>'.$val['faq_ans'].'</p>
+                                        <p>'.html_entity_decode(html_entity_decode($val['faq_ans'])).'</p>
                                     </div>
                                 </div>
                             </div>';

@@ -1,7 +1,10 @@
 <?php
     if(CONTROLER){
 
-        if (ZONE && ZONE=="course" && !isset($_GET['href'])) {
+        if (ZONE && ZONE=="aaoifi-certificate-registration" && !isset($_GET['href'])) {
+            include "function/aaoifi_form.php";
+        }
+        elseif (ZONE && ZONE=="course" && !isset($_GET['href'])) {
             include "function/course_form.php";
         }
         elseif (ZONE && ZONE!="course" && !isset($_GET['href'])) {

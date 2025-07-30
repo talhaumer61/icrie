@@ -28,7 +28,8 @@ echo'
                     <li><a class="nav-link menu-title link-nav" href="course.php"><i data-feather="book"></i><span>Courses</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="events.php"><i data-feather="calendar"></i><span>Events</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="functions.php"><i data-feather="file-text"></i><span>Functions</span></a></li>
-                    <li><a class="nav-link menu-title link-nav" href="function_types.php"><i data-feather="file-text"></i><span>Function Types</span></a></li>
+                    <li><a class="nav-link menu-title link-nav" href="journals.php"><i data-feather="file-text"></i><span>Journals</span></a></li>
+                    <li><a class="nav-link menu-title link-nav" href="publications.php"><i data-feather="file-text"></i><span>Publications</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="team.php"><i data-feather="users"></i><span>Team</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="faq.php"><i data-feather="layers"></i><span>FAQ</span></a></li>
                     <li><a class="nav-link menu-title link-nav" href="blogs.php"><i data-feather="layers"></i><span>Blogs</span></a></li>

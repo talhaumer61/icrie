@@ -61,7 +61,7 @@ echo'
                                 foreach(navBarMaker() as $key => $val):
                                     echo '
                                         <li class="'.((!empty($val['links']))? 'menu-item-children': '').'" >
-                                            <a href="'.SITE_URL_WEB.$key.'">'.moduleName(strtolower($val['name'])).'</a>';
+                                            <a href="'.SITE_URL_WEB.$key.'">'.moduleName(strtolower($val['name'])).' '.((!empty($val['links']))? '<i class="fa-solid fa-chevron-down"></i>': '').'</a>';
                                             if (!empty($val['links'])) {
                                                 echo '
                                                 <ul class="sub-menu">';
@@ -79,11 +79,7 @@ echo'
                                 endforeach;
                                 echo '
                     </ul>
-                    <div class="header-right-end">
-                        <span class="line-1"></span>
-                        <span class="line-2"></span>
-                        <span class="line-3"></span>
-                    </div>
+                    <button class="btn btn-primary header-right-end">Menu</i></button>
                     <div class="main-menu-right">
                         <a href="'.SITE_URL_WEB.'zakat-calculator" class="btn btn-primary">Zakat calculator <i class="flaticon-next"></i></a>
                     </div>

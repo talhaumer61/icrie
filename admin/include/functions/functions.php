@@ -76,6 +76,11 @@ function get_status($id = '') {
 	}
 }
 // STATUS (ACTIVE & INACTIVE)
+$publication_type= array (
+						  '1' => 'Book' 
+						, '2' => 'Article'
+						, '3' => 'Report'
+					   );
 function get_publication_type($id = '') {
 	$listpublicationtype= array (
 						  '1' => 'Book' 
@@ -83,11 +88,11 @@ function get_publication_type($id = '') {
 						, '3' => 'Report'
 					   );
 	if(!empty($id)){
-		$listpublicationtype= array (
-									  '1' => '<span class="badge badge-primary">Active</span>' 
-									, '2' => '<span class="badge badge-warning">Article</span>'
-									, '3' => '<span class="badge badge-success">Inactive</span>'
-								); 
+		// $listpublicationtype= array (
+		// 							  '1' => '<span class="badge badge-primary">Active</span>' 
+		// 							, '2' => '<span class="badge badge-warning">Article</span>'
+		// 							, '3' => '<span class="badge badge-success">Inactive</span>'
+		// 						); 
 		return $listpublicationtype[$id];
 	} else {
 		return $listpublicationtype;
@@ -700,24 +705,40 @@ function generateCouponCode() {
 function navBarMaker() {
 	$listNav = array(
 						  "index"			=> array( "name" => "home"				,   "links" => "" )
-						, "team"			=> array( "name" => "team"				,   "links" => "" )
-						, "blog"			=> array( "name" => "blog"				,   "links" => "" )
+						// , "team"			=> array( "name" => "team"				,   "links" => "" )
 						, "functions"		=> array( "name" => "functions"			,   "links" => 
 													array(
-															  "function/research-journal"	=> array( "name" => "research journal"							,	"links" => "")
-															, "function/publications"	=> array( "name" => "publications"						,	"links" => "")
-															, "function/training-and-capacity-building"	=> array( "name" => "training and capacity building"	,	"links" => "")
+															"function/consultancy-advisory-services"	=> array( "name" => "Consultancy & Advisory Services"	,	"links" => "")
+															,"function/training-and-capacity-building"	=> array( "name" => "training and capacity building"	,	"links" => "")
 															, "function/course"	=> array( "name" => "Course"	,	"links" => "")
+															, "function/aaoifi-certificate-registration"	=> array( "name" => "AAOIFI Certificate Registration"	,	"links" => "")
 														)
 													)
-						, "about"			=> array( "name" => "Contact Info"		,   "links" => 
+						, "events"		=> array( "name" => "events"			,   "links" => 
+													array(
+															  "events/wiefc"	=> array( "name" => "wiefc"							,	"links" => "")
+															, "events/symposium"	=> array( "name" => "symposium"						,	"links" => "")
+															, "events/guest-lecture"	=> array( "name" => "guest lecture"	,	"links" => "")
+															, "events/workshop-and-seminar"	=> array( "name" => "workshop and seminar"	,	"links" => "")
+														)
+													)
+						, "journals"		=> array( "name" => "journals"				,   "links" => "" )
+						, "publications"		=> array( "name" => "publications"			,   "links" => 
+													array(
+															"publications/books"	=> array( "name" => "books"	,	"links" => "")
+															,"publications/articles"	=> array( "name" => "articels"	,	"links" => "")
+															, "publications/reports"	=> array( "name" => "reports"	,	"links" => "")
+														)
+													)
+						, "blog"			=> array( "name" => "blog"				,   "links" => "" )
+						, "ask_your_question"			=> array( "name" => "ask_your_question"				,   "links" => "" )
+						, "about"			=> array( "name" => "About"		,   "links" => 
 													array(
 															  "about-us"		=> array( "name" => "about us"								,   "links" => "" )
 															, "contact"		=> array( "name" => "contact us"							,   "links" => "" )
 															, "faq"			=> array( "name" => "FAQ"									,   "links" => "" )
 														)
 							  						)
-						, "fatwa"			=> array( "name" => "fatwa_request"				,   "links" => "" )
 					);
 	return $listNav;
 
@@ -752,29 +773,58 @@ function get_teamtype($id) {
 }
 //--------------- EVENTS ------------------
 $eventtype = array (
-	array('id'=>1, 'name'=>'Seminar')	,
-	array('id'=>2, 'name'=>'Webinar')	,
-	array('id'=>3, 'name'=>'Training')	,
-	array('id'=>4, 'name'=>'Workshop')
+	array('id'=>1, 'name'=>'WIEFC')	,
+	array('id'=>2, 'name'=>'Symposium')	,
+	array('id'=>3, 'name'=>'Guest Lectures')	,
+	array('id'=>4, 'name'=>'Workshop and Seminar')
 );
 function get_eventtype($id='') {
 	$listevents = array (
-			'1' => 'Seminar'	, 
-			'2' => 'Webinar'	, 
-			'3' => 'Training'	, 
-			'4' => 'Workshop'	);
+			'1' => 'WIEFC'	, 
+			'2' => 'Symposium'	, 
+			'3' => 'Guest Lectures'	, 
+			'4' => 'Workshop and Seminar'	);
 	if(!empty($id)){
-		$listeventlabel= array (
-									'1' => '<span class="badge badge-secondary">Seminar</span>' 
-									, '2' => '<span class="badge badge-warning">Webinar</span>'
-									, '3' => '<span class="badge badge-success">Training</span>'
-									, '4' => '<span class="badge badge-success">Workshop</span>'
-								); 
-		return $listeventlabel[$id];
+		// $listeventlabel= array (
+		// 							'1' => '<span class="badge badge-secondary">Seminar</span>' 
+		// 							, '2' => '<span class="badge badge-warning">Webinar</span>'
+		// 							, '3' => '<span class="badge badge-success">Training</span>'
+		// 							, '4' => '<span class="badge badge-success">Workshop</span>'
+		// 						); 
+		return $listevents[$id];
 	} else {
 		return $listevents;
 	}
 }
+$function_type = [
+    [
+        'type_id' => 1,
+        'type_name' => 'Consultancy & Advisory Services',
+        'type_href' => 'consultancy-advisory-services',
+    ],
+    [
+        'type_id' => 2,
+        'type_name' => 'Training and Capacity Building',
+        'type_href' => 'training-capacity-building',
+    ],
+];
 
+$pub_type = [
+    [
+        'type_id' => 1,
+        'type_name' => 'Books',
+        'type_href' => 'books',
+    ],
+    [
+        'type_id' => 2,
+        'type_name' => 'Articles',
+        'type_href' => 'articles',
+    ],
+    [
+        'type_id' => 2,
+        'type_name' => 'reports',
+        'type_href' => 'reports',
+    ],
+];
 
 ?>
