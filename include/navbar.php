@@ -61,14 +61,14 @@ echo'
                                 foreach(navBarMaker() as $key => $val):
                                     echo '
                                         <li class="'.((!empty($val['links']))? 'menu-item-children': '').'" >
-                                            <a href="'.SITE_URL_WEB.$key.'">'.moduleName(strtolower($val['name'])).' '.((!empty($val['links']))? '<i class="fa-solid fa-chevron-down"></i>': '').'</a>';
+                                            <a href="'.(($val['name'] == "Journal") ? $key : SITE_URL_WEB.$key).'" '.(($val['name'] == "Journal")?"target='_blank'":"").'>'.moduleName(strtolower($val['name'])).' '.((!empty($val['links']))? '': '').'</a>';
                                             if (!empty($val['links'])) {
                                                 echo '
                                                 <ul class="sub-menu">';
                                                     foreach($val['links'] as $SubKey => $SubVal):
                                                         echo '
                                                         <li>
-                                                            <a href="'.SITE_URL_WEB.$SubKey.'">'.(($SubVal['name'] != 'FAQ')? ucwords(strtolower($SubVal['name'])): $SubVal['name']).'</a>
+                                                            <a href="'.SITE_URL_WEB.$SubKey.'">'.$SubVal['name'].'</a>
                                                         </li>';
                                                     endforeach;
                                                 echo '
@@ -81,7 +81,7 @@ echo'
                     </ul>
                     <button class="btn btn-primary header-right-end">Menu</i></button>
                     <div class="main-menu-right">
-                        <a href="'.SITE_URL_WEB.'zakat-calculator" class="btn btn-primary">Zakat calculator <i class="flaticon-next"></i></a>
+                        <a href="'.SITE_URL_WEB.'zakat-calculator" class="btn btn-primary px-2">Zakat calculator <i class="flaticon-next"></i></a>
                     </div>
                 </div>
             </nav>

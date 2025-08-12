@@ -30,16 +30,6 @@ echo'
                         echo '
                     </select>
                 </div>
-                <div class="col mb-2" id="sub_type_container" style="display: none;">
-                    <label class="form-label">Sub Type <span class="text-danger">*</span></label>
-                    <select class="form-control js-example-basic-single" name="id_sub_type" id="news_status" required>
-                        <option value=""> Choose one</option>';
-                        foreach(get_publication_type() as $key => $value):
-                            echo'<option value="'.$key.'">'.$value.'</option>';
-                        endforeach;
-                        echo'
-                    </select>
-                </div>
             </div>
             <div class="row">
                 <div class="col mb-2">

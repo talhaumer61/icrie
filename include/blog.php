@@ -1,7 +1,7 @@
 <?php
 if(ZONE){
     include "include/breadcrumb.php";
-    include "blog/journal_detail.php";
+    include "blog/blog_detail.php";
 }
 else{
     include "include/breadcrumb.php";

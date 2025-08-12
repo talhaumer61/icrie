@@ -133,7 +133,7 @@ echo '
                 <div class="col-xl-9 why-choose-left-one">
                     <div class="heading-box heading-white">
                         <span class="heading-subtitle wow fadeInUp animated animated animated" style="visibility: visible; animation-name: fadeInUp;">🤝 WHY CHOOSE</span>
-                        <h2>Your trusted financial guidance partner</h2>
+                        <h2>Your reliable hub for training and research in Islamic economics & finance</h2>
                     </div>
                     <div class="why-choose-one-image">
                         <img src="assets/images/why-choose-image-1.jpg" alt="why-choose-image" style="transition: transform 0.8s ease-out; transform: translateY(135px) scale(1.2);">
@@ -143,19 +143,18 @@ echo '
                             <div class="why-choose-one-box">
                                 <div class="why-choose-box-one-title">
                                     <i class="flaticon-solution"></i>
-                                    <h4>Personalized Loan</h4>
+                                    <h4>Training and Capacity Building</h4>
                                 </div>
-                                <p>We offer customized loan options tailored to meet your specific financial
-                                    requirements.</p>
+                                <p>Empowering individuals and teams with practical skills to excel in their roles.</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                             <div class="why-choose-one-box">
                                 <div class="why-choose-box-one-title">
                                     <i class="flaticon-badge"></i>
-                                    <h4>Competitive Rates</h4>
+                                    <h4>Courses</h4>
                                 </div>
-                                <p>Benefit from loanlift competitive rates, designed to make your loans more affordable.
+                                <p>Industry-relevant courses designed to boost your knowledge and career prospects.
                                 </p>
                             </div>
                         </div>
@@ -163,10 +162,9 @@ echo '
                             <div class="why-choose-one-box">
                                 <div class="why-choose-box-one-title">
                                     <i class="flaticon-trusted"></i>
-                                    <h4>Trusted Partner</h4>
+                                    <h4>Consultancy & Advisory Services</h4>
                                 </div>
-                                <p>With a commitment to transparency personalized service, we work you every step of
-                                    way.</p>
+                                <p>Expert guidance to help you make informed decisions and drive strategic growth.</p>
                             </div>
                         </div>
                     </div>

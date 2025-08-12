@@ -704,38 +704,38 @@ function generateCouponCode() {
 
 function navBarMaker() {
 	$listNav = array(
-						  "index"			=> array( "name" => "home"				,   "links" => "" )
+						  "index"			=> array( "name" => "Home"				,   "links" => "" )
 						// , "team"			=> array( "name" => "team"				,   "links" => "" )
-						, "functions"		=> array( "name" => "functions"			,   "links" => 
+						, "functions"		=> array( "name" => "Functions"			,   "links" => 
 													array(
 															"function/consultancy-advisory-services"	=> array( "name" => "Consultancy & Advisory Services"	,	"links" => "")
-															,"function/training-and-capacity-building"	=> array( "name" => "training and capacity building"	,	"links" => "")
-															, "function/course"	=> array( "name" => "Course"	,	"links" => "")
+															,"function/training-and-capacity-building"	=> array( "name" => "Training and Capacity Building"	,	"links" => "")
+															, "function/course"	=> array( "name" => "Courses"	,	"links" => "")
 															, "function/aaoifi-certificate-registration"	=> array( "name" => "AAOIFI Certificate Registration"	,	"links" => "")
 														)
 													)
-						, "events"		=> array( "name" => "events"			,   "links" => 
+						, "events"		=> array( "name" => "Events"			,   "links" => 
 													array(
-															  "events/wiefc"	=> array( "name" => "wiefc"							,	"links" => "")
-															, "events/symposium"	=> array( "name" => "symposium"						,	"links" => "")
-															, "events/guest-lecture"	=> array( "name" => "guest lecture"	,	"links" => "")
-															, "events/workshop-and-seminar"	=> array( "name" => "workshop and seminar"	,	"links" => "")
+															  "events/wiefc"	=> array( "name" => "WIEFCs"							,	"links" => "")
+															, "events/symposium"	=> array( "name" => "Symposium"						,	"links" => "")
+															, "events/guest-lecture"	=> array( "name" => "Guest Lecture"	,	"links" => "")
+															, "events/workshop-and-seminar"	=> array( "name" => "Workshop and Seminar"	,	"links" => "")
 														)
 													)
-						, "journals"		=> array( "name" => "journals"				,   "links" => "" )
-						, "publications"		=> array( "name" => "publications"			,   "links" => 
+						, "https://ojs.mul.edu.pk/index.php/IJIEG "		=> array( "name" => "Journal"				,   "links" => "" )
+						, "publications"		=> array( "name" => "Publications"			,   "links" => 
 													array(
-															"publications/books"	=> array( "name" => "books"	,	"links" => "")
-															,"publications/articles"	=> array( "name" => "articels"	,	"links" => "")
-															, "publications/reports"	=> array( "name" => "reports"	,	"links" => "")
+															"publications/books"	=> array( "name" => "Books"	,	"links" => "")
+															,"publications/articles"	=> array( "name" => "Articels"	,	"links" => "")
+															, "publications/reports"	=> array( "name" => "Reports"	,	"links" => "")
 														)
 													)
-						, "blog"			=> array( "name" => "blog"				,   "links" => "" )
-						, "ask_your_question"			=> array( "name" => "ask_your_question"				,   "links" => "" )
+						, "blog"			=> array( "name" => "Blogs"				,   "links" => "" )
+						, "ask_your_question"			=> array( "name" => "Ask Your Question"				,   "links" => "" )
 						, "about"			=> array( "name" => "About"		,   "links" => 
 													array(
-															  "about-us"		=> array( "name" => "about us"								,   "links" => "" )
-															, "contact"		=> array( "name" => "contact us"							,   "links" => "" )
+															  "about-us"		=> array( "name" => "About Us"								,   "links" => "" )
+															, "contact"		=> array( "name" => "Contact Us"							,   "links" => "" )
 															, "faq"			=> array( "name" => "FAQ"									,   "links" => "" )
 														)
 							  						)
@@ -805,7 +805,7 @@ $function_type = [
     [
         'type_id' => 2,
         'type_name' => 'Training and Capacity Building',
-        'type_href' => 'training-capacity-building',
+        'type_href' => 'training-and-capacity-building',
     ],
 ];
 

@@ -15,7 +15,7 @@
         ),
         'return_type' => 'all'
     );                  
-    $rowsFunctions  = $dblms->getRows(PUBLICATIONS, $sqlArrayFunction);
+    $rowsFunctions  = $dblms->getRows(PUBLICATIONS, $sqlArrayFunction,$query);
 
     echo'
     <div class="inner-page-hero" style="background-image: url('.SITE_URL_WEB.'assets/images/background/blog-hero-bg.jpg);">

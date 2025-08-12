@@ -7,7 +7,7 @@
         ,'function'             =>  'function'
         ,'publications'         =>  'publications'
         ,'events'               =>  'events'
-        ,'journals'             =>  'journals'
+        // ,'journals'             =>  'journals'
         ,'ask_your_question'    =>  'ask_your_question'
         ,'about-us'             =>  'about_us'
         ,'zakat-calculator'     =>  'zakat_calculator'

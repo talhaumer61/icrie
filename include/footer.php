@@ -214,8 +214,8 @@ echo'
                             foreach($val['links'] as $SubKey => $SubVal) {
                                 echo '
                                 <li>
-                                    <a href="'.SITE_URL_WEB.$SubKey.'">'.
-                                        (($SubVal['name'] != 'FAQ') ? ucwords(strtolower($SubVal['name'])) : $SubVal['name']).'
+                                    <a href="'.SITE_URL_WEB.$SubKey.'">
+                                    '.$SubVal['name'] .'
                                     </a>
                                 </li>';
                             }
