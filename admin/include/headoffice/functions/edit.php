@@ -110,7 +110,7 @@ echo'
                         <div class="dz-message needsclick">
                             <i class="fa fa-cloud-upload"></i>
                             <h6>Drop files here or click to upload.</h6>
-                            <input type="file" class="form-control" name="functions_photo" id="news_photo" accept=".jpg, .jpeg, .png" required>
+                            <input type="file" class="form-control" name="functions_photo" id="news_photo" accept=".jpg, .jpeg, .png" >
                         </div>
                     </div>
                 </div>

@@ -37,7 +37,9 @@ echo '
                         <div class="team-one-details">
                             <div class="team-one-details-inner">
                                 <h5>'.$val['team_name'].'</h5>
-                                <p>'.$val['team_designation'].'</p>
+                                <p>'.$val['team_designation'].'</p>';
+                                /*
+                                echo'
                                 <div class="team-one-social-media">
                                     <ul>
                                         <li><a href="'.$value['team_fb'].'" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -46,7 +48,9 @@ echo '
                                         <li><a href="'.$value['team_twitter'].'" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div>';
+                                */
+                                echo'
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
-/**=====================
-     62. Responsive CSS Start
+/**=====================
+     62. Responsive CSS Start
 ==========================**/
 @media screen and (max-width: 1660px) {
   .blog-list .blog-details p {
@@ -3462,7 +3462,7 @@
             flex: 0 0 50%;
     max-width: 50%; } }
 
-/**=====================
-     62. Responsive CSS Ends
+/**=====================
+     62. Responsive CSS Ends
 ==========================**/
 /*# sourceMappingURL=responsive.css.map */

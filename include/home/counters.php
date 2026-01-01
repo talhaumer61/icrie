@@ -133,7 +133,7 @@ echo '
                 <div class="col-xl-9 why-choose-left-one">
                     <div class="heading-box heading-white">
                         <span class="heading-subtitle wow fadeInUp animated animated animated" style="visibility: visible; animation-name: fadeInUp;">🤝 WHY CHOOSE</span>
-                        <h2>Your reliable hub for training and research in Islamic economics & finance</h2>
+                        <h2 style="font-size:25px;">Your reliable hub for training and research in Islamic economics & finance</h2>
                     </div>
                     <div class="why-choose-one-image">
                         <img src="assets/images/why-choose-image-1.jpg" alt="why-choose-image" style="transition: transform 0.8s ease-out; transform: translateY(135px) scale(1.2);">

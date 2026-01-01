@@ -454,8 +454,8 @@ div.dataTables_scrollFoot table {
   margin-top: 0 !important;
   border-top: none; }
 
-/*
- * Table styles
+/*
+ * Table styles
  */
 table.dataTable {
   width: 100%;
@@ -463,11 +463,11 @@ table.dataTable {
   clear: both;
   border-collapse: separate;
   border-spacing: 0;
-  /*
-	 * Header and footer styles
+  /*
+	 * Header and footer styles
 	 */
-  /*
-	 * Body styles
+  /*
+	 * Body styles
 	 */ }
   table.dataTable thead th,
   table.dataTable tfoot th {
@@ -660,8 +660,8 @@ table.dataTable td {
   -webkit-box-sizing: content-box;
           box-sizing: content-box; }
 
-/*
- * Control feature layout
+/*
+ * Control feature layout
  */
 .dataTables_wrapper {
   position: relative;
@@ -820,8 +820,8 @@ table.dataTable tfoot th.ui-state-default {
   table.dataTable tfoot th.ui-state-default:first-child {
     border-left-width: 1px; }
 
-/*
- * Control feature layout
+/*
+ * Control feature layout
  */
 .dataTables_wrapper .dataTables_paginate .fg-button {
   -webkit-box-sizing: border-box;
@@ -943,8 +943,8 @@ table.dataTable thead .sorting_asc_disabled:before,
 table.dataTable thead .sorting_desc_disabled:after {
   opacity: 0; }
 
-/*
- * Styling for DataTables with Semantic UI
+/*
+ * Styling for DataTables with Semantic UI
  */
 table.dataTable.table {
   margin: 0; }
@@ -1175,8 +1175,8 @@ table.dataTable.uk-table-condensed .sorting_desc:after {
   top: 6px;
   right: 6px; }
 
-/*
- * Table styles
+/*
+ * Table styles
  */
 table.dataTable {
   width: 100%;
@@ -1184,11 +1184,11 @@ table.dataTable {
   clear: both;
   border-collapse: separate;
   border-spacing: 0;
-  /*
-	 * Header and footer styles
+  /*
+	 * Header and footer styles
 	 */
-  /*
-	 * Body styles
+  /*
+	 * Body styles
 	 */ }
   table.dataTable thead th,
   table.dataTable tfoot th {
@@ -1381,8 +1381,8 @@ table.dataTable td {
   -webkit-box-sizing: content-box;
           box-sizing: content-box; }
 
-/*
- * Control feature layout
+/*
+ * Control feature layout
  */
 .dataTables_wrapper {
   position: relative;

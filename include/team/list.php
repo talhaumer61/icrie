@@ -33,8 +33,10 @@ echo '
                         </a>
                         <div class="team-one-details">
                             <div class="team-one-details-inner">
-                                <h5><a class="text-white name-clamp" href="'.SITE_URL_WEB.'team/'.($value['team_href']).'">'.$value['team_name'].'</a></h5>
-                                <p class="text-white name-clamp">'.$value['team_designation'].'</p>
+                                <h5><a class="text-white" href="'.SITE_URL_WEB.'team/'.($value['team_href']).'">'.$value['team_name'].'</a></h5>
+                                <p class="text-white">'.$value['team_designation'].'</p>';
+                                /*
+                                echo'
                                 <div class="team-one-social-media">
                                     <ul>
                                         <li><a href="'.$value['team_fb'].'" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -43,7 +45,9 @@ echo '
                                         <li><a href="'.$value['team_twitter'].'" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div>';
+                                */
+                                echo'
                             </div>
                         </div>
                     </div>

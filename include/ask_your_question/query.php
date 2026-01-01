@@ -6,7 +6,6 @@ if(isset($_POST['submit_add'])) {
 								  'fatwa_status'	    =>	1
 								, 'fatwa_fullname'		=>	cleanvars($_POST['fatwa_fullname'])
 								, 'fatwa_phone'			=>	cleanvars($_POST['fatwa_phone'])					
-								, 'fatwa_phone'			=>	cleanvars($_POST['fatwa_phone'])					
 								, 'fatwa_email'			=>	cleanvars($_POST['fatwa_email'])					
 								, 'fatwa_detail'		=>	cleanvars($_POST['fatwa_detail'])					
 								, 'id_added'		    => 	cleanvars($_SESSION['LOGINID_DT']) 

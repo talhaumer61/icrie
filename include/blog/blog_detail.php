@@ -26,8 +26,8 @@ echo '
                     <div class="blog-block">
                         <div class="single-blog-details">
                             <h3>'.ucwords($blog['blog_title']).'</h3>
-                            <p>'.$blog['blog_brief_detail'].'</p>
-                            <p>'.$blog['blog_detail'].'</p>
+                            <p>'.html_entity_decode($blog['blog_brief_detail']).'</p>
+                            <p>'.html_entity_decode($blog['blog_detail']).'</p>
                         </div>
                     </div>
                 </div>

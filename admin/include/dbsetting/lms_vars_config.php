@@ -5,10 +5,16 @@ ob_clean();
 date_default_timezone_set("Asia/Karachi");
 
 
+// DATABASE VARIABLES
 define( 'LMS_HOSTNAME'          , 'localhost' );
 define( 'LMS_NAME'              , 'gptech_icrie' );
 define( 'LMS_USERNAME'          , 'root');
 define( 'LMS_PASSWORD'          , '' );
+
+// define( 'LMS_HOSTNAME'      , 'localhost' );
+// define( 'LMS_NAME'          , 'mulradio_icrie2019' );
+// define( 'LMS_USERNAME'      , 'mulradio_icrie19');
+// define( 'LMS_PASSWORD'      , '7kSYzJ$Ef[&(' );
 
 // ADMIN TABLES
 define('ADMINS'                 , 'ic_admins');

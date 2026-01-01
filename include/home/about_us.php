@@ -40,7 +40,7 @@ echo '
                         <li>
                             <i class="flaticon-call"></i>
                             <div class="about-contact-four">
-                                <h6>Call To Any Queary</h6>
+                                <h6>Call To Any Query</h6>
                                 <p>'.$info['info_phone'].'</p>
                             </div>
                         </li>';

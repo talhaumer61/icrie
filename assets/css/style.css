@@ -3473,6 +3473,10 @@ margin-bottom: 24px;
     width: calc(100% - 30px);
 }
 .team-one-details-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
     padding: 10px;
     text-align: center;
     background-color: var(--loanlift-primary-bg);

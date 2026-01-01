@@ -53,7 +53,7 @@ echo'
                         <div class="dz-message needsclick">
                             <i class="fa fa-cloud-upload"></i>
                             <h6>Drop files here or click to upload.</h6>
-                            <input type="file" class="form-control" name="about_img" accept=".jpg, .jpeg, .png" required>
+                            <input type="file" class="form-control" name="about_img" accept=".jpg, .jpeg, .png">
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ echo'
                         <div class="dz-message needsclick">
                             <i class="fa fa-cloud-upload"></i>
                             <h6>Drop files here or click to upload.</h6>
-                            <input type="file" class="form-control" name="about_img2" accept=".jpg, .jpeg, .png" required>
+                            <input type="file" class="form-control" name="about_img2" accept=".jpg, .jpeg, .png">
                         </div>
                     </div>
                 </div>
