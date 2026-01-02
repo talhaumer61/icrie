@@ -170,4 +170,35 @@ if(isset($_GET['deleteid'])) {
 	}
 }
 
+// REMOVE ATTACHMENT FILE
+if (isset($_POST['remove_file'])) {
+
+    $publicationID = cleanvars($_POST['publication_id']);
+
+    $row = $dblms->getRows(PUBLICATIONS, array(
+        'select' => 'publication_file',
+        'where'  => array('publication_id' => $publicationID),
+        'return_type' => 'single'
+    ));
+
+    if (!empty($row['publication_file'])) {
+        $filePath = 'uploads/files/publications/'.$row['publication_file'];
+
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+
+        // clear DB column
+        $dblms->Update(
+            PUBLICATIONS,
+            array('publication_file' => ''),
+            "WHERE publication_id = '".$publicationID."'"
+        );
+    }
+
+    sessionMsg('Success', 'Attachment removed successfully.', 'success');
+    header("Location:".moduleName().".php?editid=".$publicationID, true, 301);
+    exit();
+}
+
 ?>

@@ -39,11 +39,12 @@
                     </div>
                 </div>
             </div>';
-            if(!empty($rowsFunction['publication_file'])){}
+            if( !empty($rowsFunction['publication_file']) ){
                 echo '
                 <div class="row mb-3">
                         <a href="'.SITE_URL.'uploads/files/publications/'.$rowsFunction['publication_file'].'" class="" target="_blank">Download Attachment</a>
                 </div>';
+            }
             echo'
         </div>
     </div>
