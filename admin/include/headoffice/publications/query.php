@@ -16,12 +16,12 @@ if(isset($_POST['submit_add'])) {
 	}
 	else{
 		$values     = array (
-								'publication_status'	    =>	cleanvars($_POST['publication_status'])
-								, 'publication_title'	    =>	cleanvars($_POST['publication_title'])
-								, 'publication_href'		=>	to_seo_url($_POST['publication_title'])
-								, 'publication_desc'		=>	cleanvars($_POST['publication_desc'])					
+								'publication_status'	=>	cleanvars($_POST['publication_status'])
+								, 'publication_title'	=>	cleanvars($_POST['publication_title'])
+								, 'publication_href'	=>	to_seo_url($_POST['publication_title'])
+								, 'publication_desc'	=>	cleanvars($_POST['publication_desc'])					
 								, 'id_type'				=>	cleanvars($_POST['id_type'])					
-								, 'id_team'				=>	cleanvars($_POST['id_team'])					
+								, 'id_team'				=>	!empty($_POST['id_team']) ? implode(',',  $_POST['id_team']): ''					
 								, 'id_added'		    => 	cleanvars($_SESSION['LOGINID_DT']) 
 								, 'date_added'		    =>	date('Y-m-d H:i:s')
 							);   
@@ -94,12 +94,12 @@ if(isset($_POST['submit_edit'])) {
 	}
 	else{ 
 		$values     = array (
-								'publication_status'	    =>	cleanvars($_POST['publication_status'])
-								, 'publication_title'	    =>	cleanvars($_POST['publication_title'])
-								, 'publication_href'		=>	to_seo_url($_POST['publication_title'])
-								, 'publication_desc'		=>	cleanvars($_POST['publication_desc'])					
+								'publication_status'	=>	cleanvars($_POST['publication_status'])
+								, 'publication_title'	=>	cleanvars($_POST['publication_title'])
+								, 'publication_href'	=>	to_seo_url($_POST['publication_title'])
+								, 'publication_desc'	=>	cleanvars($_POST['publication_desc'])					
 								, 'id_type'				=>	cleanvars($_POST['id_type'])					
-								, 'id_team'				=>	cleanvars($_POST['id_team'])					
+								, 'id_team'				=>	!empty($_POST['id_team']) ? implode(',',  $_POST['id_team']): ''					
 								, 'id_modify'		    => 	cleanvars($_SESSION['LOGINID_DT']) 
 								, 'date_modify'		    =>	date('Y-m-d H:i:s')
 							);

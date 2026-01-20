@@ -10,14 +10,15 @@ if (!empty($_GET['search_word'])) {
 }
 
 $condition = array ( 
-                     'select'       =>  "p.publication_id, p.publication_status, p.publication_photo, p.publication_title, p.publication_desc, p.id_type, t.team_name"
-                    ,'join'         =>  "INNER JOIN ".TEAMS." t ON p.id_team=t.team_id"
-                    ,'where' 	    =>  array( 
-                                                 'p.publication_status'    => 1
-                                                ,'p.is_deleted'       => 0
-                                            )
-                    ,'return_type'  =>  'all' 
-                   ); 
+                'select' => "p.publication_id, p.publication_status, p.publication_photo, p.publication_title, p.publication_desc, p.id_type, GROUP_CONCAT(DISTINCT t.team_name SEPARATOR ', ') AS team_names",
+                'join' => "INNER JOIN ".TEAMS." t ON FIND_IN_SET(t.team_id, p.id_team) AND t.is_deleted = 0  AND t.team_status = 1",
+                'where' => array( 
+                                'p.publication_status' => 1,
+                                'p.is_deleted'          => 0
+                            ),
+                'group_by' => 'p.publication_id',
+                'return_type' => 'all'
+        ); 
 $publications = $dblms->getRows(PUBLICATIONS.' p', $condition, $query);
 echo'
 <div class="row">
@@ -79,7 +80,7 @@ echo'
                                             </div>
                                         </td>
                                         <td>'.get_publication_type($row['id_type']).'</td>
-                                        <td class="text-center">'.($row['team_name']).'</td>
+                                        <td class="text-center">'.($row['team_names']).'</td>
                                         <td class="text-center">'.get_status($row['publication_status']).'</td>
                                         <td class="text-center">
                                             <a class="btn btn-secondary btn-xs" href="publications.php?view=edit&edit_id='.$row['publication_id'].'"><i class="fa fa-pencil"></i> </a>

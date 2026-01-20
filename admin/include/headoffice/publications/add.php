@@ -44,7 +44,7 @@ echo'
                 </div>
                 <div class="col mb-2">
                     <label class="form-label">Members <span class="text-danger">*</span></label>
-                    <select class="form-control js-example-basic-single" name="id_team" id="news_status" required>
+                    <select class="form-control js-example-basic-single" name="id_team[]" multiple id="news_status" required>
                         <option value=""> Choose one</option>';
                             $sqllms = array ( 
                                                 'select' 		      =>	'

@@ -62,7 +62,7 @@ echo '
 
     <div class="col mb-2">
         <label class="form-label">Members <span class="text-danger">*</span></label>
-        <select class="form-control js-example-basic-single" name="id_team" required>
+        <select class="form-control js-example-basic-single" name="id_team[]" multiple required>
             <option value="">Choose one</option>';
             $sqllms = array(
                 'select' => 'team_id, team_name',
@@ -70,9 +70,15 @@ echo '
                 'return_type'=>'all'
             );
             $teams = $dblms->getRows(TEAMS, $sqllms);
-            foreach($teams as $t){
-                echo '<option value="'.$t['team_id'].'" '.($t['team_id']==$row['id_team']?'selected':'').'>'.$t['team_name'].'</option>';
+            $selectedTeams = !empty($row['id_team']) ? explode(',', $row['id_team']) : [];
+            foreach ($teams as $t) {
+                $selected = in_array($t['team_id'], $selectedTeams) ? 'selected' : '';
+                echo '<option value="'.$t['team_id'].'" '.$selected.'>'.$t['team_name'].'</option>';
             }
+
+            // foreach($teams as $t){
+            //     echo '<option value="'.$t['team_id'].'" '.($t['team_id']==$row['id_team']?'selected':'').'>'.$t['team_name'].'</option>';
+            // }
 echo '
         </select>
     </div>

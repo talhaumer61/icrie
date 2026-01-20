@@ -1,14 +1,17 @@
 <?php
     $sqlArrayFunction   = array ( 
-                            'select' 		=>	'publication_id, publication_title, publication_file, publication_photo, publication_desc, id_type, date_added'
+                            'select' 		=>	"p.publication_id, p.publication_title, p.publication_file, p.publication_photo, p.publication_desc, p.id_type, p.date_added, GROUP_CONCAT(DISTINCT t.team_name SEPARATOR ', ') AS team_names"
+                            ,'join' => "INNER JOIN ".TEAMS." t ON FIND_IN_SET(t.team_id, p.id_team) AND t.is_deleted = 0  AND t.team_status = 1"
+
                             ,'where' 		=>	array( 
-                                                          'publication_status'	=> '1'
-                                                        , 'is_deleted'	        => '0'
-                                                        , 'publication_href'	    => cleanvars($_GET['href'])
+                                                          'p.publication_status'	=> '1'
+                                                        , 'p.is_deleted'	        => '0'
+                                                        , 'p.publication_href'	    => cleanvars($_GET['href'])
                                                     )
                             ,'return_type' 	=> 'single' 
                         ); 
-    $rowsFunction  = $dblms->getRows(PUBLICATIONS, $sqlArrayFunction);
+    $rowsFunction  = $dblms->getRows(PUBLICATIONS. ' p', $sqlArrayFunction);
+    // echo $sqlArrayFunction;exit;
     
     echo'
     <div class="inner-page-hero" style="background-image: url('.SITE_URL_WEB.'assets/images/background/blog-hero-bg.jpg);">
@@ -34,6 +37,7 @@
                     <div class="portfolio-block">
                         <div class="protfolio-details-two">
                             <h3>'.$rowsFunction['publication_title'].'</h3>
+                            <p><span class="fw-bold">By: </span>'.$rowsFunction['team_names'].'</p>
                             <p>'.html_entity_decode(html_entity_decode($rowsFunction['publication_desc'])).'</p>
                         </div>
                     </div>
